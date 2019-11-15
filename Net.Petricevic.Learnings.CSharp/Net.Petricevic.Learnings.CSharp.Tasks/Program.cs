@@ -9,6 +9,47 @@ namespace Net.Petricevic.Learnings.CSharp.Tasks
     {
         static void Main(string[] args)
         {
+            WaitingTaskExample();
+
+            //BasicTaskExampleCreationTypes();
+        }
+
+        private static void WaitingTaskExample()
+        {
+            Task taskA = Task.Run(() => Thread.Sleep(2000));
+
+            Console.WriteLine($"taskA Status: {taskA.Status}");
+
+            try
+            {
+                CancellationTokenSource cts = new CancellationTokenSource();
+
+                cts.CancelAfter(1500);
+
+                try
+                {
+                    taskA.Wait(1000, cts.Token);
+                }
+                catch (OperationCanceledException e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+
+                Console.WriteLine($"taskA Status: {taskA.Status}");
+
+                if (!taskA.IsCompleted)
+                {
+                    Console.WriteLine("Timed out before taskA completed!");
+                }
+            }
+            catch (AggregateException ex)
+            {
+                Console.WriteLine(ex);
+            }
+        }
+
+        private static void BasicTaskExampleCreationTypes()
+        {
             Action<object> action = (object obj) =>
             {
                 Console.WriteLine("Task={0}, obj={1}, Thread={2}", Task.CurrentId, obj, Thread.CurrentThread.ManagedThreadId);
@@ -41,7 +82,6 @@ namespace Net.Petricevic.Learnings.CSharp.Tasks
             // Although the task was run synchronously, it's a good practice 
             // to wait for it in the even exection were thrown by the task.
             t4.Wait();
-
         }
     }
 }
