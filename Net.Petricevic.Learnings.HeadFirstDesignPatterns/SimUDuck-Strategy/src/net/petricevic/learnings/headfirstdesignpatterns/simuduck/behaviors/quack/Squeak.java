@@ -3,8 +3,10 @@ package net.petricevic.learnings.headfirstdesignpatterns.simuduck.behaviors.quac
 public class Squeak implements QuackBehavior
 {
     @Override
-    public void quack()
+    public String quack()
     {
-        System.out.println("Squeak!");
+        String quack = "Squeak";
+        System.out.println(quack);
+        return quack;
     }
 }

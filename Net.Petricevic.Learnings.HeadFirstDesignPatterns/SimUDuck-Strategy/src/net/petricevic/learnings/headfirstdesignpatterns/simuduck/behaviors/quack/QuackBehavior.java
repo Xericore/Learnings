@@ -2,5 +2,5 @@ package net.petricevic.learnings.headfirstdesignpatterns.simuduck.behaviors.quac
 
 public interface QuackBehavior
 {
-    void quack();
+    String quack();
 }

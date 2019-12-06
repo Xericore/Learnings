@@ -3,8 +3,10 @@ package net.petricevic.learnings.headfirstdesignpatterns.simuduck.behaviors.quac
 public class MuteQuack implements QuackBehavior
 {
     @Override
-    public void quack()
+    public String quack()
     {
-        System.out.println("... (silence)");
+        String quack = "(silence)";
+        System.out.println(quack);
+        return quack;
     }
 }

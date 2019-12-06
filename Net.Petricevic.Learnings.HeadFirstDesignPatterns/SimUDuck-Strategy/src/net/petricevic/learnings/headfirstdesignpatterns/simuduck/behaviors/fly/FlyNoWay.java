@@ -3,8 +3,10 @@ package net.petricevic.learnings.headfirstdesignpatterns.simuduck.behaviors.fly;
 public class FlyNoWay implements FlyBehavior
 {
     @Override
-    public void fly()
+    public String fly()
     {
-        System.out.println("I can't fly!");
+        String fly = "I can't fly!";
+        System.out.println(fly);
+        return fly;
     }
 }

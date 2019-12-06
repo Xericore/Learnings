@@ -3,8 +3,10 @@ package net.petricevic.learnings.headfirstdesignpatterns.simuduck.behaviors.quac
 public class Quack implements QuackBehavior
 {
     @Override
-    public void quack()
+    public String quack()
     {
-        System.out.println("Quack quack!");
+        String quack = "Quack quack!";
+        System.out.println(quack);
+        return quack;
     }
 }

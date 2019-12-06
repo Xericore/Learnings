@@ -8,12 +8,14 @@ public abstract class Duck
     protected FlyBehavior flyBehavior;
     protected QuackBehavior quackBehavior;
 
-    public void performQuack()
+    public String performQuack()
     {
         if (quackBehavior != null)
-            quackBehavior.quack();
+            return quackBehavior.quack();
         else
             System.out.println("quackBehavior is null.");
+
+        return null;
     }
 
     public void swim()
@@ -23,11 +25,13 @@ public abstract class Duck
 
     public abstract void display();
 
-    public void performFly()
+    public String performFly()
     {
         if (flyBehavior != null)
-            flyBehavior.fly();
+            return flyBehavior.fly();
         else
             System.out.println("flyBehavior is null.");
+
+        return null;
     }
 }

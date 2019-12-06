@@ -3,8 +3,10 @@ package net.petricevic.learnings.headfirstdesignpatterns.simuduck.behaviors.fly;
 public class FlyWithWings implements FlyBehavior
 {
     @Override
-    public void fly()
+    public String fly()
     {
-        System.out.println("Flying with my wings. Flap Flap.");
+        String fly = "Flying with my wings. Flap Flap.";
+        System.out.println(fly);
+        return fly;
     }
 }
