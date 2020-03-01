@@ -1,4 +1,6 @@
-﻿namespace Net.Petricevic.Learnings.CSharp.Factory
+﻿using Net.Petricevic.Learnings.CSharp.Factory.Person;
+
+namespace Net.Petricevic.Learnings.CSharp.Factory
 {
     public class Villager : IPerson
     {
