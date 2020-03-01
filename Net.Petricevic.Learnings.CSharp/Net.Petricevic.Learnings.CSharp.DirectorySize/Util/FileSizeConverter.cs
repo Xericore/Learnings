@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Net.Petricevic.Learnings.CSharp.DirectorySize
+﻿namespace Net.Petricevic.Learnings.CSharp.DirectorySize.Util
 {
     public static class FileSizeConverter
     {

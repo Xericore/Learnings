@@ -1,5 +1,7 @@
 ﻿using System.Windows;
 using Microsoft.WindowsAPICodePack.Dialogs;
+using Net.Petricevic.Learnings.CSharp.DirectorySize.SizedComponents;
+using Net.Petricevic.Learnings.CSharp.DirectorySize.Util;
 
 namespace Net.Petricevic.Learnings.CSharp.DirectorySize
 {
@@ -21,16 +23,20 @@ namespace Net.Petricevic.Learnings.CSharp.DirectorySize
 
             var result = openFolderDialog.ShowDialog();
 
-            if (result == CommonFileDialogResult.Ok)
-            {
-                _selectedDirectory = openFolderDialog.FileName;
+            if (result != CommonFileDialogResult.Ok) return;
 
-                DirectoryComponent root = new DirectoryComponent(_selectedDirectory);
+            _selectedDirectory = openFolderDialog.FileName;
 
-                long megabytes = FileSizeConverter.ConvertBytesToMegabytes(root.SizeInBytes);
+            var root = new SizedDirectory(_selectedDirectory);
 
-                DirectorySizeLabel.Content = megabytes;
-            }
+            DisplaySizeInUi(root.SizeInBytes);
+        }
+
+        private void DisplaySizeInUi(long sizeInBytes)
+        {
+            long megabytes = FileSizeConverter.ConvertBytesToMegabytes(sizeInBytes);
+
+            DirectorySizeLabel.Content = megabytes;
         }
     }
 }
