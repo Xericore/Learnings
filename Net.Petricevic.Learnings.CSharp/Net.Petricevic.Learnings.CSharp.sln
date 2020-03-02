@@ -35,6 +35,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Net.Petricevic.Learnings.CS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Net.Petricevic.Learnings.CSharp.DirectorySize", "Net.Petricevic.Learnings.CSharp.DirectorySize\Net.Petricevic.Learnings.CSharp.DirectorySize.csproj", "{F9B60476-5B4A-43F5-932F-0FC7FE9C155C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Net.Petricevic.Learnings.CSharp.InterfaceSegregationPrinciple", "Net.Petricevic.Learnings.CSharp.InterfaceSegregationPrinciple\Net.Petricevic.Learnings.CSharp.InterfaceSegregationPrinciple.csproj", "{8E689442-9260-4C89-B9DB-F2BCE12F24AB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -91,6 +93,10 @@ Global
 		{F9B60476-5B4A-43F5-932F-0FC7FE9C155C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9B60476-5B4A-43F5-932F-0FC7FE9C155C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9B60476-5B4A-43F5-932F-0FC7FE9C155C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E689442-9260-4C89-B9DB-F2BCE12F24AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E689442-9260-4C89-B9DB-F2BCE12F24AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E689442-9260-4C89-B9DB-F2BCE12F24AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E689442-9260-4C89-B9DB-F2BCE12F24AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -104,6 +110,7 @@ Global
 		{A0B9A330-FEC2-4261-AF07-246C29DDB37A} = {979B6DA2-6C12-4BD8-B150-220479547D83}
 		{8E46F630-2BD7-4489-8E83-BFB43B6E036C} = {979B6DA2-6C12-4BD8-B150-220479547D83}
 		{AE2FFC27-EC28-4F97-975F-06766790E8A5} = {0FB57967-ED80-4825-8BDC-C9A3A4CAE1F1}
+		{8E689442-9260-4C89-B9DB-F2BCE12F24AB} = {979B6DA2-6C12-4BD8-B150-220479547D83}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AA3CA544-9713-490A-9109-51C345E0B8CD}
